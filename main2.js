@@ -196,12 +196,17 @@ function GameStart() {
   }, 100);
 }
 
-GameStart();
-
 restart.onclick = function () {
   GameStart();
 };
 
-// fetch('index.json').then((res)=>{
-//     console.log(res.body);
-// })
+
+fetch('index.json').then((res)=>{
+  return res.json()
+}).then((data)=>{
+  arr = data
+  GameStart();
+
+})
+
+
