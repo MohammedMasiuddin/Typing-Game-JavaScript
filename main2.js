@@ -131,6 +131,10 @@ function GameStart() {
 
   let scoreValue = 0;
   let lifeValue = 3;
+  score.innerText = scoreValue;
+  lifes.innerText = lifeValue;
+
+
 
   function setScore(sc = 1) {
     scoreValue += sc;
@@ -192,12 +196,12 @@ function GameStart() {
   }, 100);
 }
 
-// GameStart();
+GameStart();
 
 restart.onclick = function () {
   GameStart();
 };
 
-fetch('index.json').then((res)=>{
-    console.log(res.body);
-})
+// fetch('index.json').then((res)=>{
+//     console.log(res.body);
+// })
